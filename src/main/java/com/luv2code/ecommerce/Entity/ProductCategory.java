@@ -15,11 +15,11 @@ public class ProductCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private  int id;
-    @Column(name = "description")
-    private  String description;
+    @Column(name = "category_name")
+    private  String category_name;
 
-    //field name in the "Product" entity that maps the relationship back to the "Category" entity
+    //field name in the "Product" entity that maps the relationship back to the "ProductCategory" entity
     //
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "productCategory")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product_category")
     private Set<Product> products;
 }

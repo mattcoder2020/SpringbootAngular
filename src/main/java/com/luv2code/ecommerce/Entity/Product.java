@@ -18,13 +18,13 @@ public class Product {
     private int id;
 
     //@Column(name ="product_category_id")
+    @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private ProductCategory productCategory;
+    private ProductCategory product_category;
 
-    @Column(name ="name")
-    private String name;
+    @Column(name ="product_name")
+    private String product_name;
 
-    private ProductCategory category;
     @Column(name="price")
     private int price;
 }
