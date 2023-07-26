@@ -20,7 +20,7 @@ public class Product {
     //@Column(name ="product_category_id")
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private ProductCategory product_category;
+    private ProductCategory category;
 
     @Column(name ="product_name")
     private String product_name;

@@ -20,6 +20,6 @@ public class ProductCategory {
 
     //field name in the "Product" entity that maps the relationship back to the "ProductCategory" entity
     //
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product_category")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "category")
     private Set<Product> products;
 }
